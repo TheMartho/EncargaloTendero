@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:clickable="true"
+    android:background="@color/white">
+    <!-- other elements -->
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:paddingVertical="10dp"
+        android:text="@string/dialog_producto" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ga_dialog_recycler_view_list_productos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+    </androidx.recyclerview.widget.RecyclerView>
+</LinearLayout>

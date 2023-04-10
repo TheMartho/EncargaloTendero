@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="3dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true"
+    android:focusable="true"
+    android:clickable="true"
+    android:background="@color/white">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:background="@drawable/outlinedbutton_white">
+        <TextView
+            android:id="@+id/ap_strtitulocurso"
+            style="@style/Subtitle_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ap_varstreventosenvivo1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/ap_strcharla"
+            style="@style/Subtitle_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ap_varstreventosenvivo2"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ap_strtitulocurso" />
+        <TextView
+            android:id="@+id/ap_eevtxtnombreevento"
+            style="@style/Body_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="{nombre evento}"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            app:layout_constraintStart_toEndOf="@+id/ap_strcharla"
+            app:layout_constraintTop_toBottomOf="@+id/ap_strtitulocurso" />
+        <TextView
+            android:id="@+id/ap_strfechahora"
+            style="@style/Subtitle_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ap_varstreventosenvivo3"
+            android:layout_marginTop="3dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ap_strcharla" />
+        <TextView
+            android:id="@+id/ap_eevtxtfechahora"
+            style="@style/Body_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="{nombre evento}"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="5dp"
+            app:layout_constraintStart_toEndOf="@+id/ap_strfechahora"
+            app:layout_constraintTop_toBottomOf="@+id/ap_strcharla" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ap_iconflecha"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

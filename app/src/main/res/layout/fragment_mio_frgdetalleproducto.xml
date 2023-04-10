@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_margin"
+    tools:context=".tendero.Inicio_sesion.ui.Mis_ordenes.mio_frgdetalleproducto"
+    android:weightSum="10"
+    android:focusable="true"
+    android:clickable="true"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mio_varstrdetalleproducto1"
+                style="@style/Body_1"/>
+            <TextView
+                android:id="@+id/txt_num_pedido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="00000001"
+                android:layout_marginLeft="10dp"
+                style="@style/Body_1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mio_varstrdetalleproducto2"
+                style="@style/Subtitle_1"/>
+
+            <TextView
+                android:id="@+id/mio_dptxtcontadorproductos"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+            <CheckBox
+                android:id="@+id/chxbTodosProductos"
+                android:layout_weight="3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:orientation="horizontal"
+            android:background="@color/white">
+            <ListView
+                android:id="@+id/mio_lstvProductos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:text="@string/mio_varstrdetalleproducto8"
+                android:textSize="20sp"
+
+                android:textColor="@color/blackPrimary"
+                ></TextView>
+
+            <TextView
+                android:id="@+id/mio_txtmostrartotal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="0"
+                android:textSize="20sp"
+                android:gravity="right"
+                android:textColor="@color/blackPrimary"
+                ></TextView>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/mio_dpbtncancelarorden"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mio_varstrdetalleproducto6"
+                style="@style/Contained_button_green"/>
+
+            <Button
+                android:id="@+id/mio_dpbtnenviarorden"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:text="@string/mio_varstrdetalleproducto7"
+                app:layout_constraintEnd_toEndOf="parent"
+                style="@style/Contained_button_blue"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

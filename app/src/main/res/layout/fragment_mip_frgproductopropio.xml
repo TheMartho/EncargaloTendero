@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/activity_margin"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".tendero.Inicio_sesion.ui.Mis_productos.mip_frgproductopropio">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/mip_ppimgagregarimagen01"
+                    android:layout_width="@dimen/btn_type02_width"
+                    android:layout_height="@dimen/btn_type02_width"
+                    android:layout_marginTop="@dimen/input_marginRight"
+                    android:layout_marginLeft="@dimen/input_marginRight"
+                    android:layout_marginBottom="@dimen/input_marginRight"
+                    android:src="@drawable/ic_icon_agregarimg"
+                    tools:ignore="ContentDescription"/>
+                <ImageView
+                    android:id="@+id/mip_ppimgagregarimagen02"
+                    android:layout_width="@dimen/btn_type02_width"
+                    android:layout_height="@dimen/btn_type02_width"
+                    android:layout_margin="@dimen/input_marginRight"
+                    android:src="@drawable/ic_icon_agregarimg"
+                    tools:ignore="ContentDescription"/>
+                <ImageView
+                    android:id="@+id/mip_ppimgagregarimagen03"
+                    android:layout_width="@dimen/btn_type02_width"
+                    android:layout_height="@dimen/btn_type02_width"
+                    android:layout_marginTop="@dimen/input_marginRight"
+                    android:layout_marginRight="@dimen/input_marginRight"
+                    android:layout_marginBottom="@dimen/input_marginRight"
+                    android:src="@drawable/ic_icon_agregarimg"
+                    tools:ignore="ContentDescription"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/input_marginRight"
+                android:text="@string/mit_varstrregistrarproducto3"
+                style="@style/Body_3"
+                />
+
+            <TextView
+                style="@style/Body_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/containedbtn_blue"
+                android:textColor="@color/white"
+                android:text="@string/mip_varstrproductopropio1"
+                tools:layout_editor_absoluteX="15dp" />
+
+            <TextView
+                style="@style/Body_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/input_marginRight"
+                android:text="@string/mip_varstrproductopropio6"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/mip_ppedtdescripcionproducto"
+                style="@style/input"
+                android:layout_width="@dimen/btn_type05_width"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:inputType="textMultiLine"/>
+
+            <TextView
+                style="@style/Body_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/input_marginRight"
+                android:text="@string/mip_varstrproductopropio10"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/mip_ppedtstockminimo"
+                style="@style/input"
+                android:layout_width="@dimen/btn_type05_width"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:inputType="numberDecimal"
+                android:maxLength="6"/>
+
+            <TextView
+                style="@style/Body_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/input_marginRight"
+                android:text="@string/mip_varstrproductopropio9"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/mip_ppedtstock"
+                style="@style/input"
+                android:layout_width="@dimen/btn_type05_width"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:inputType="numberDecimal"
+                android:maxLength="6"/>
+
+            <TextView
+                style="@style/Body_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/input_marginRight"
+                android:text="@string/mip_varstrproductopropio11"/>
+
+            <Spinner
+                android:id="@+id/mip_ppspnunidaddemedida"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                style="@style/spinner2"
+                android:entries="@array/mit_varstrdetalleproducto12"/>
+
+            <TextView
+                style="@style/Body_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/input_marginRight"
+                android:text="@string/mip_varstrproductopropio3"/>
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/input_marginRight"
+                android:text="PROPIO"
+                android:enabled="false"/>
+
+            <TextView
+                style="@style/Body_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/mip_varstrproductopropio4"
+                android:layout_margin="@dimen/input_marginRight"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/input_marginRight"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_txt_simboloprecio"
+                    style="@style/textinput"
+                    android:layout_margin="@dimen/input_marginRight"
+                    android:layout_gravity="center_vertical" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/mip_ppedtcostoproducto"
+                    style="@style/input"
+                    android:padding="@dimen/input_padding"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"/>
+            </LinearLayout>
+
+            <TextView
+                style="@style/Body_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/input_marginRight"
+                android:text="@string/mip_varstrproductopropio5"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_txt_simboloprecio"
+                    style="@style/textinput"
+                    android:layout_margin="@dimen/input_marginRight"
+                    android:layout_gravity="center_vertical" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/mip_ppedtprecioventa"
+                    style="@style/input"
+                    android:padding="@dimen/input_padding"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/mip_ppbtncancelar"
+                    style="@style/Contained_button_green"
+                    android:background="@drawable/containedbtn_green"
+                    android:text="@string/mip_varstrproductopropio7"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/input_marginRight"/>
+
+                <Button
+                    android:id="@+id/mip_ppbtnagregarproducto"
+                    style="@style/Contained_button_blue"
+                    android:background="@drawable/containedbtn_blue"
+                    android:text="@string/mip_varstrproductopropio8"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/input_marginRight"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

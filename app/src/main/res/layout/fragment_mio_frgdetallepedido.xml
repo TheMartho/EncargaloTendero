@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    * Autor: Jimmy Jiménez Cerrón
+    * Institución: Universidad Continental
+    * Año: 2022
+    -->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/grey"
+    android:padding="@dimen/activity_margin"
+    android:focusable="true"
+    android:clickable="true"
+    tools:context=".tendero.Inicio_sesion.ui.Mis_ordenes.mio_frgdetallepedido">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mio_varstrdetallepedido2"
+                android:textColor="@color/blackPrimary"
+                android:paddingTop="10dp"/>
+
+            <TextView
+                android:id="@+id/mio_txtnumpedido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:hint="00000000"
+                android:paddingTop="10dp"
+                android:textColor="@color/blackPrimary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/txt_Nombres"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mio_varstrdetallepedido4"
+                android:textColor="@color/blackPrimary"
+                android:layout_margin="5dp"
+                android:textSize="16dp"/>
+
+            <TextView
+                android:id="@+id/mio_txtLdetalllecliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text=""
+                android:paddingTop="10dp"
+                android:layout_margin="5dp"
+                android:textColor="@color/blackPrimary" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mio_txtestadorepartidor"
+            android:textColor="@color/blackPrimary"
+            android:text="@string/mio_varstrdetallepedido5"
+            android:layout_marginTop="16dp"
+            android:textSize="16dp"/>
+
+
+
+        <Spinner
+            android:layout_gravity="center"
+            android:id="@+id/is_sptipopersona"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown"
+            android:layout_marginTop="16dp"
+            android:hint="Seleccione repartidor"
+            android:entries="@array/repartidores"
+            android:gravity="center_horizontal"
+            android:background="@drawable/outline_spinner"
+            ></Spinner>
+
+        <TextView
+
+            android:id="@+id/mio_txtRepartidor"
+            android:background="@drawable/containedbutton_white"
+            android:layout_gravity="center"
+            android:layout_width="380dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal"
+            android:text="Cargando" />
+
+
+
+
+        <Button
+            android:id="@+id/mio_dpbtnchat"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mio_varstrdetallepedido6"
+            android:drawablePadding="10dp"
+            android:drawableLeft="@drawable/ic_baseline_chat_24"
+            style="@style/Contained_button_green"
+            />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:padding="@dimen/activity_margin">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blackPrimary"
+                android:text="@string/mio_varstrdetallepedido7"
+                android:layout_marginBottom="10dp"
+                style="@style/Body_1"/>
+            <LinearLayout
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/mio_imgvw1"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/verificacion_oscuro"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Solicitado"
+                    android:textColor="@color/blackPrimary"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/mio_txtdetallesolicitado"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"/>
+
+            </LinearLayout>
+
+
+
+        <LinearLayout
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/mio_imgvw2"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:src="@drawable/verificacion_oscuro">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/mio_txtestadoaceptadorechazado"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/mio_varstrdetallepedido9"
+                android:textColor="@color/blackPrimary"
+                android:textSize="12dp"
+
+                />
+
+            <TextView
+                android:id="@+id/mio_txtdetalleaceptadorechazado"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3">
+
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/mio_imgvw3"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:src="@drawable/verificacion_oscuro">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/mio_varstrdetallepedido10"
+                android:textColor="@color/blackPrimary"
+                android:textSize="12dp"
+                />
+
+            <TextView
+
+                android:id="@+id/mio_txtdetalleenprepa"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3">
+
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/mio_imgvw4"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:src="@drawable/verificacion_oscuro">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/mio_varstrdetallepedido17"
+                android:textColor="@color/blackPrimary"
+                android:textSize="12dp"
+                />
+
+            <TextView
+                android:id="@+id/mio_txtdetallepreparado"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3">
+
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/mio_imgvw5"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:src="@drawable/verificacion_oscuro">
+
+            </ImageView>
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/mio_varstrdetallepedido11"
+                android:textColor="@color/blackPrimary"
+                android:textSize="12dp"
+                />
+
+            <TextView
+                android:id="@+id/mio_txtdetalleencamino"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3">
+
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/mio_imgvw6"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:src="@drawable/verificacion_oscuro">
+
+            </ImageView>
+
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/mio_varstrdetallepedido12"
+                android:textColor="@color/blackPrimary"
+                android:textSize="12dp"
+                />
+
+            <TextView
+                android:id="@+id/mio_txtdetalleentregado"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3">
+
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mio_cajonreclamado"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/mio_imgvw7"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:src="@drawable/verificacion_oscuro">
+
+            </ImageView>
+
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/mio_varstrdetallepedido13"
+                android:textColor="@color/blackPrimary"
+                android:textSize="12dp"
+                />
+
+            <TextView
+                android:id="@+id/mio_txtdetallereclamado"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3">
+
+            </TextView>
+
+        </LinearLayout>
+
+
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:text="@string/mio_varstrdetallepedido14"
+            android:textColor="@color/blackPrimary"
+            android:textSize="15dp"
+            android:layout_margin="5dp"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+
+            android:id="@+id/mio_dpedtdireccionentrega"
+            style="@style/input"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal"
+            android:text="Cargando" />
+
+        <Button
+            android:id="@+id/mio_dpbtndetalle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="VER PRODUCTOS"
+            android:layout_marginTop="15dp"
+            style="@style/Contained_button_blue"/>
+
+    </LinearLayout>
+    </LinearLayout>
+</ScrollView>

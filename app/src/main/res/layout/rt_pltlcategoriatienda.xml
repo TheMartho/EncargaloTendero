@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/activity_margin"
+    android:layout_gravity="center_horizontal"
+    android:background="@color/white"
+    android:focusable="true"
+    android:clickable="true">
+
+    <FrameLayout
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="25dp"
+        tools:ignore="UselessParent">
+
+        <RadioButton
+            android:id="@+id/rt_ptrbtnrubro"
+            style="@style/Outlined_button_blue"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layoutDirection="rtl"
+            android:background="@drawable/outline_black"
+            android:paddingBottom="@dimen/input_padding">
+        </RadioButton>
+
+        <TextView
+            android:id="@+id/rt_pttxtnombrecategoria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+    </FrameLayout>
+
+</LinearLayout>

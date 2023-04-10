@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Creado por Briceño Malpartida Douglas Igancio - Universidad Continental - 2022-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:clickable="true"
+    android:background="@color/white"
+    tools:context=".tendero.Inicio_sesion.ui.Soporte.sp_frgdetallevideodemostrativo">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rclv_listavideodemo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--    Creado por Yaranga Avila Marlon - Universidad Continental - 2022-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:clickable="true"
+    android:padding="@dimen/activity_margin"
+    android:background="@color/white"
+    tools:context=".tendero.Inicio_sesion.ui.Soporte.sp_frgmenusoporte" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_centroayuda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/menu_soporte_item_1"
+            android:drawableLeft="@drawable/sp_iconcentroayuda"
+            android:layout_marginBottom="16dp"
+            style="@style/Outlined_buttonXL_black"/>
+
+        <Button
+            android:id="@+id/btn_Notificaciones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/menu_soporte_item_2"
+            android:drawableLeft="@drawable/sp_iconnotificaciones"
+            android:layout_marginBottom="16dp"
+            style="@style/Outlined_buttonXL_black"/>
+
+        <Button
+            android:id="@+id/btn_terminois_condiciones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/menu_soporte_item_3"
+            android:drawableLeft="@drawable/sp_iconterminos1"
+            android:layout_marginBottom="16dp"
+            style="@style/Outlined_buttonXL_black"/>
+
+        <Button
+            android:id="@+id/btn_compartir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/menu_soporte_item_4"
+            android:drawableLeft="@drawable/sp_iconcompartir"
+            android:layout_marginBottom="16dp"
+            style="@style/Outlined_buttonXL_black"/>
+
+        <Button
+            android:id="@+id/btn_acerca_de"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/menu_soporte_item_5"
+            android:drawableLeft="@drawable/sp_iconacercade"
+            android:layout_marginBottom="16dp"
+            style="@style/Outlined_buttonXL_black"/>
+
+        <Button
+            android:id="@+id/btn_spcodigo_tienda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/menu_soporte_item_7"
+            android:drawableLeft="@drawable/sp_iconcodtienda"
+            android:layout_marginBottom="16dp"
+            style="@style/Outlined_buttonXL_black"/>
+
+        <Button
+            android:id="@+id/btn_cerrar_sesion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/menu_soporte_item_6"
+            android:drawableLeft="@drawable/sp_iconcerrarsesion"
+            android:layout_marginBottom="16dp"
+            style="@style/Outlined_buttonXL_black"/>
+
+    </LinearLayout>
+</ScrollView>

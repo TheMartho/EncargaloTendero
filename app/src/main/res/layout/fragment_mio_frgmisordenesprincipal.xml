@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    * Autor: Jimmy Jiménez Cerrón
+    * Institución: Universidad Continental
+    * Año: 2022
+    -->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/grey"
+    android:padding="@dimen/activity_margin"
+    android:focusable="true"
+    android:clickable="true"
+    tools:context=".tendero.Inicio_sesion.ui.Mis_ordenes.mio_frgmisordenesprincipal">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="7"
+            >
+
+            <EditText
+                android:hint="Buscar por id de orden"
+                android:id="@+id/mio_txtOrdenId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:background="@drawable/outline_textinputedittext">
+
+            </EditText>
+
+            <ImageButton
+                android:id="@+id/mio_imgbtnOrdenId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/outline_textinputedittext"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/ic_baseline_search_24"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="7"
+            >
+
+            <Spinner
+                android:id="@+id/mio_mopspnordenarporestado"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:spinnerMode="dropdown"
+                style="@style/spinner"
+                android:entries="@array/Filtro_ordenestado" />
+
+            <ImageButton
+                android:id="@+id/mio_imgbtnOrdenEstado"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/outline_textinputedittext"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/ic_baseline_search_24"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="7"
+            >
+
+            <Spinner
+                android:id="@+id/mio_mopspnordenarporfecha"
+                android:background="@drawable/outline_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:spinnerMode="dropdown"
+                android:text="@string/mio_varstrmisordenesprincipal9"
+                android:entries="@array/Filtro_ordenfecha" />
+
+            <ImageButton
+                android:id="@+id/mio_imgbtnOrdenFecha"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/outline_textinputedittext"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/ic_baseline_search_24"/>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mio_moprclvlistaproductos"
+            >
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+</ScrollView>

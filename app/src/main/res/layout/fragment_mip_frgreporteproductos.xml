@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_margin"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:focusable="true"
+    android:clickable="true"
+    tools:context=".tendero.Inicio_sesion.ui.Mis_productos.mip_frgreporteproductos">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        tools:context=".tendero.Inicio_sesion.ui.Mis_productos.mip_frgReporteProductos">
+
+        <!-- Filtro por-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginBottom="4dp"
+                android:gravity="center"
+                android:text="@string/mit_varstrreporteproductos1"
+                app:drawableStartCompat="@drawable/ic_icon_filter"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/mit_repspncategoria"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Spinner
+                android:id="@+id/mip_repspncategoria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Outlined_button_blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:entries="@array/mit_varstrreporteproductos7"/>
+
+            <!--
+            <Button
+                android:id="@+id/mip_repbtnfiltrofecha"
+                android:layout_width="@dimen/btn_type02_width"
+                android:layout_height="37dp"
+                android:layout_marginStart="10dp"
+                style="@style/Contained_button_blue"
+                android:text="@string/mit_varstrreporteproductos6"
+                android:background="@drawable/containedbtn_blue"
+                />
+            -->
+
+        </LinearLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="25dp">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/mip_reprclvproductos"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:visibility="visible"
+                tools:ignore="NestedScrolling" />
+        </ScrollView>
+
+    </LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/mip_repbtnexportar"
+            style="@style/Contained_button_green"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="224dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="48dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/containedbtn_green"
+            android:drawableStart="@drawable/exportar"
+            android:drawablePadding="10dp"
+            android:text="@string/mit_varstrreporteproductos5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

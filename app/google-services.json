@@ -1,0 +1,103 @@
+{
+  "project_info": {
+    "project_number": "869132616981",
+    "project_id": "encargalo-268d4",
+    "storage_bucket": "encargalo-268d4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:869132616981:android:dff11b6c8d905c5b74551c",
+        "android_client_info": {
+          "package_name": "mx.com.encargalo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "869132616981-3niotjo09898k6drf36pi4s4rrri9amj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "mx.com.encargalo",
+            "certificate_hash": "664135853269a767a781d36e30badd7bf3c8f002"
+          }
+        },
+        {
+          "client_id": "869132616981-avigkf6t5loa7g3cq1nb4cfd1ei2p99e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "mx.com.encargalo",
+            "certificate_hash": "e2fc70c4065d71beb5024760af2e38aabb72f438"
+          }
+        },
+        {
+          "client_id": "869132616981-dor3grd09nies9vu4bnvnb3tts8agngk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "mx.com.encargalo",
+            "certificate_hash": "8aa3cb2cc9b0c8b7c2cff56b1ddb398027dc004f"
+          }
+        },
+        {
+          "client_id": "869132616981-h62qi5vgn47jdk7u0tc2mrbipqbafm1i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "mx.com.encargalo",
+            "certificate_hash": "6cf5846c1ea0939a5b26e435754f1ac8ebbab0d1"
+          }
+        },
+        {
+          "client_id": "869132616981-m9oedfbp6mh0a0io54rjqjvcn8ntj6to.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "mx.com.encargalo",
+            "certificate_hash": "81c5cf091020f0fffee26c2006f594eccabf2376"
+          }
+        },
+        {
+          "client_id": "869132616981-odim5a90ifunknc4eh9epp1rd64s2k45.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "mx.com.encargalo",
+            "certificate_hash": "5a4e151e5d87b155a920dee22ff31303048a4cd9"
+          }
+        },
+        {
+          "client_id": "869132616981-qesvqhelb4na009nfnp2612bjftglfgu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "mx.com.encargalo",
+            "certificate_hash": "21a98b9a4b36f79562767fdc1938efbd5ab528da"
+          }
+        },
+        {
+          "client_id": "869132616981-s73i0p57h4ms7hpsuitv7gt48qo16d55.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "mx.com.encargalo",
+            "certificate_hash": "363166962f1a1b104899ee66880ee7c847456465"
+          }
+        },
+        {
+          "client_id": "869132616981-v7gms838fme64hfud43s6sconqee4t8m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgTB4wH2vYgkQnA4ob8DQqIs54_DQStss"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "869132616981-v7gms838fme64hfud43s6sconqee4t8m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

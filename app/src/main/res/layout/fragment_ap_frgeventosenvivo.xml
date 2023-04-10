@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    android:padding="@dimen/activity_margin"
+    tools:context=".tendero.Inicio_sesion.ui.Mi_Aprendizaje.ap_frgeventosenvivo"
+    android:focusable="true"
+    android:clickable="true"
+    android:backgroundTint="@color/white">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ap_eevrclveventos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</FrameLayout>

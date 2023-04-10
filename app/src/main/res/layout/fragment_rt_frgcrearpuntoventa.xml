@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_margin"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".tendero.Inicio_sesion.ui.Mi_tienda.rt_frgcrearpuntoventa">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/rt_varstrcrearpuntoventa1"
+            style="@style/Headline_5"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rt_varstrcrearpuntoventa2"
+            style="@style/textinput"/>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/rt_cpvedtnombremarca"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/input"
+            android:inputType="text"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rt_varstrcrearpuntoventa4"
+            style="@style/textinput"/>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/rt_cpvedtcorreo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/input"
+            android:inputType="textEmailAddress"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rt_varstrcrearpuntoventa5"
+            style="@style/textinput"/>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/rt_cpvedttelefono"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/input"
+            android:inputType="number"
+            android:maxLength="10"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rt_varstrcrearpuntoventa3"
+            style="@style/textinput"/>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/rt_cpvedtventames"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/input"
+            android:inputType="numberDecimal"
+            android:maxLength="6"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rt_varstrcrearpuntoventa6"
+            style="@style/textinput"/>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/rt_cpvedtinventario"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/input"
+            android:inputType="numberDecimal"
+            android:maxLength="6"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rt_varstrcrearpuntoventa9"
+            style="@style/textinput"/>
+        <Spinner
+            android:id="@+id/rt_cpvspnrciudad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            style="@style/spinner2"
+            android:entries="@array/rt_varstrcrearpuntoventa10"/>
+
+        <Button
+            android:id="@+id/rt_cpvbtnubicacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_icon_geoaltfill"
+            style="@style/Contained_button_green"
+            android:drawablePadding="10dp"
+            android:text="@string/rt_varstrcrearpuntoventa7"
+            android:layout_marginTop="@dimen/activity_vertical_margin"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/rt_cpvedtubicacion"
+            style="@style/input"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_type02_width"
+            android:layout_gravity="center"
+            android:inputType="textMultiLine"
+            android:layout_marginTop="@dimen/activity_vertical_margin"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/rt_cpvbtncontinuar"
+                style="@style/Contained_button_blue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@drawable/containedbtn_blue"
+                android:text="@string/str_btn_continuar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>

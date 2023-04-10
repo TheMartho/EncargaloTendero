@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".tendero.Inicio_sesion.ui.Mi_publicidad.pub_frgcrearanuncio"
+    android:orientation="vertical"
+    android:background="@color/whitePrimary"
+    android:focusable="true"
+    android:clickable="true"
+    android:padding="@dimen/activity_margin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/whitePrimary">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                style="@style/Subtitle_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pub_varstrcrearanuncio1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <Button
+                android:id="@+id/pub_cabtnseleccionarimg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pub_varstrcrearanuncio2"
+                android:drawableRight="@drawable/ap_iconflecha"
+                android:drawablePadding="10dp"
+                style="@style/Text_button_blue"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/pub_caimgvwpubcargada"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/grey_400"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pub_varstrcrearanuncio3"
+            style="@style/textinput"/>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/pub_caedttituloanuncio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            style="@style/input"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pub_varstrcrearanuncio4"
+            style="@style/textinput"/>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/pub_caedttextoanuncio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            style="@style/input"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pub_varstrcrearanuncio5"
+            style="@style/textinput"/>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/pub_caedtlinkanuncio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            style="@style/input"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pub_varstrcrearanuncio6"
+            style="@style/Body_2"
+            android:layout_marginTop="10dp"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingRight="30dp"
+            android:paddingLeft="30dp">
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <TextView
+                    style="@style/textinput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pub_varstrcrearanuncio7" />
+                <DatePicker
+                    android:id="@+id/pub_cadtpkfechainitanuncio"
+                    android:layout_width="500dp"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+                <TextView
+                    android:id="@+id/pub_caedtfechainitanuncio"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:drawableRight="@drawable/pub_iconcalendario"
+                    style="@style/input"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    style="@style/textinput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pub_varstrcrearanuncio8" />
+
+                <DatePicker
+                    android:id="@+id/pub_dtpkfechafinanuncio"
+                    android:layout_width="500dp"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+                <TextView
+                    android:id="@+id/pub_caedtfechafinanuncio"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:drawableRight="@drawable/pub_iconcalendario"
+                    style="@style/input"/>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp">
+
+            <CheckBox
+                android:id="@+id/pub_cachkbaceptarterminos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/Body_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/str_al_continuar" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/pub_varstrterminos"
+                        style="@style/Body_2_b"
+                        android:layout_width="166dp"
+                        android:layout_height="28dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_margin="0dp"
+                        android:background="@color/white"
+                        android:textStyle="italic"
+                        android:text="@string/str_terminos"
+                        android:textSize="12dp"
+                        android:stateListAnimator="@null"/>
+                    <TextView
+                        style="@style/Body_2"
+                        android:layout_width="12dp"
+                        android:layout_height="28dp"
+                        android:gravity="center"
+                        android:text="@string/str_y" />
+                    <Button
+                        android:id="@+id/pub_varstrpolitica"
+                        style="@style/Body_2_b"
+                        android:layout_width="156dp"
+                        android:layout_height="28dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_margin="0dp"
+                        android:background="@color/white"
+                        android:textStyle="italic"
+                        android:text="@string/str_politica"
+                        android:textSize="12dp"
+                        android:stateListAnimator="@null"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/pub_cabtncontinuar"
+                android:layout_width="@dimen/btn_type03_width"
+                android:layout_height="wrap_content"
+                android:text="@string/str_btn_continuar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                style="@style/Contained_button_blue"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>

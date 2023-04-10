@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_margin"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".tendero.Inicio_sesion.ui.Mi_tienda.rt_frgcategoriatienda">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            android:text="@string/rt_varstrcategoriatienda1"
+            style="@style/Headline_6"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="419dp"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="25dp"
+            tools:ignore="NestedScrolling">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rt_ctrclvrubros"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</ScrollView>

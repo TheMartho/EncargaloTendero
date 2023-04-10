@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/activity_margin"
+    android:background="@color/white"
+    android:focusable="true"
+    android:clickable="true"
+    tools:context=".tendero.Inicio_sesion.ui.Mis_productos.mip_frgdetalleproducto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/mip_dpimgagregarimagen01"
+                android:layout_width="@dimen/btn_type02_width"
+                android:layout_height="@dimen/btn_type02_width"
+                android:layout_marginTop="@dimen/input_marginRight"
+                android:layout_marginLeft="@dimen/input_marginRight"
+                android:layout_marginBottom="@dimen/input_marginRight"
+                android:src="@drawable/ic_icon_agregarimg"
+                tools:ignore="ContentDescription" />
+            <ImageView
+                android:id="@+id/mip_dpimgagregarimagen02"
+                android:layout_width="@dimen/btn_type02_width"
+                android:layout_height="@dimen/btn_type02_width"
+                android:layout_margin="@dimen/input_marginRight"
+                android:src="@drawable/ic_icon_agregarimg"
+                tools:ignore="ContentDescription" />
+            <ImageView
+                android:id="@+id/mip_dpimgagregarimagen03"
+                android:layout_width="@dimen/btn_type02_width"
+                android:layout_height="@dimen/btn_type02_width"
+                android:layout_marginTop="@dimen/input_marginRight"
+                android:layout_marginRight="@dimen/input_marginRight"
+                android:layout_marginBottom="@dimen/input_marginRight"
+                android:src="@drawable/ic_icon_agregarimg"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mit_varstrdetalleproducto1"
+            android:layout_margin="@dimen/fab_margin"
+            style="@style/Subtitle_2"
+            android:layout_gravity="center"
+            />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/input_marginRight"
+            style="@style/textinput">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/mip_dpedtcodigo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                style="@style/input"
+                android:padding="@dimen/input_padding"
+                android:hint="@string/mit_varstrdetalleproducto2"
+                android:enabled="false"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/textinput"
+            android:layout_margin="@dimen/input_marginRight">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/mip_dpedtdescripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                style="@style/input"
+                android:padding="@dimen/input_padding"
+                android:hint="@string/mit_varstrdetalleproducto4"
+                android:inputType="textMultiLine"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/textinput"
+            android:layout_margin="@dimen/input_marginRight">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/mip_dpedtstockminimo"
+                style="@style/input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="@string/mit_varstrdetalleproducto10"
+                android:padding="@dimen/input_padding"
+                android:inputType="numberDecimal"
+                android:maxLength="6"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/textinput"
+            android:layout_margin="@dimen/input_marginRight">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/mip_dpedtstock"
+                style="@style/input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="@string/mit_varstrdetalleproducto3"
+                android:padding="@dimen/input_padding"
+                android:inputType="numberDecimal"
+                android:maxLength="6"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            style="@style/Body_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/input_marginRight"
+            android:text="@string/mit_varstrdetalleproducto11" />
+
+        <Spinner
+            android:id="@+id/mip_dpspnunidaddemedida"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            style="@style/spinner2"
+            android:entries="@array/mit_varstrdetalleproducto12"/>
+
+        <TextView
+            style="@style/Body_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/input_marginRight"
+            android:text="@string/mit_varstrdetalleproducto6" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/input_marginRight">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_txt_simboloprecio"
+                style="@style/textinput"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/input_marginRight"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/mip_dpedtcostoproducto"
+                style="@style/input"
+                android:padding="@dimen/input_padding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:maxLength="6"/>
+        </LinearLayout>
+
+        <TextView
+            style="@style/Body_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/input_marginRight"
+            android:text="@string/mit_varstrdetalleproducto7"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/input_marginRight">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_txt_simboloprecio"
+                style="@style/textinput"
+                android:layout_margin="@dimen/input_marginRight"
+                android:layout_gravity="center_vertical" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/mip_dpedtprecioventa"
+                style="@style/input"
+                android:padding="@dimen/input_padding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:maxLength="6"/>
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <Button
+                android:id="@+id/mip_dpbtneliminar"
+                android:background="@drawable/containedbtn_green"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/input_marginRight"
+                android:text="@string/mit_varstrdetalleproducto9"
+                style="@style/Contained_button_green"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/mip_dpbtnmodificar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/mip_dpbtnmodificar"
+                android:background="@drawable/containedbtn_blue"
+                android:textColor="@color/whitePrimary"
+                android:layout_width="@dimen/btn_type03_width"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/input_marginRight"
+                android:text="@string/mit_varstrdetalleproducto8"
+                style="@style/Contained_button_blue"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/mip_dpbtneliminar"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+</ScrollView>

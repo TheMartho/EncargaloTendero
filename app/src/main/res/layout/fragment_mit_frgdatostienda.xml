@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_margin"
+    android:background="@color/white"
+    android:focusable="true"
+    android:clickable="true"
+    tools:context=".tendero.Inicio_sesion.ui.Mi_tienda.mit_frgdatostienda">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--Nombre de tienda -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                style="@style/Subtitle_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pub_varstrcrearanuncio1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <Button
+                android:id="@+id/mit_dtbtnseleccionarimg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pub_varstrcrearanuncio2"
+                android:drawableRight="@drawable/ap_iconflecha"
+                android:drawablePadding="10dp"
+                style="@style/Text_button_blue"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/mit_dtimgtienda"
+            android:background="@drawable/agregar_tienda_1"
+            android:layout_width="150dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            tools:ignore="ContentDescription"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/whitePrimary"
+            android:background="@drawable/containedbtn_blue"
+            style="@style/Body_2"
+            android:text="@string/rt_varstrdatostienda1"
+            />
+
+        <!--Nombre de tienda -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rt_varstrdatostienda2"
+            style="@style/textinput"/>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/mit_dtedtnombretienda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            style="@style/input"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/icono_perfil"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rt_varstrdatostienda3"
+            style="@style/textinput"/>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/mit_dtedtsitioweb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            style="@style/input"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/link_internet1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rt_varstrdatostienda4"
+            style="@style/textinput"/>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/mit_dtedtdescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            style="@style/input"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/tienda_de_abarrotes1"/>
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/whitePrimary"
+            android:background="@drawable/containedbutton_green"
+            android:text="@string/rt_varstrdatostienda5"
+            style="@style/Body_2"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rt_varstrdatostienda6"
+            style="@style/textinput"/>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/mit_dtedtcorreo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            style="@style/input"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/correo3x1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rt_varstrdatostienda7"
+            style="@style/textinput"/>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/mit_dtedttelefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            style="@style/input"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/telefono_3x1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rt_varstrdatostienda8"
+            style="@style/textinput"/>
+        <Spinner
+            android:id="@+id/mit_dtspnrciudad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            style="@style/spinner2"
+            android:entries="@array/rt_varstrcrearpuntoventa10"/>
+
+        <Button
+            android:id="@+id/mit_dtbtnubicacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_icon_geoaltfill"
+            style="@style/Contained_button_green"
+            android:text="@string/rt_varstrcrearpuntoventa7"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:drawablePadding="10dp"
+            android:background="@drawable/containedbtn_green"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/mit_dtedtubicacion"
+            style="@style/input"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_type02_width"
+            android:layout_gravity="center"
+            android:inputType="textMultiLine"
+            android:layout_marginTop="@dimen/activity_vertical_margin"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/mit_dtbtncontinuar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Contained_button_blue"
+                android:layout_marginTop="50dp"
+                android:text="@string/str_btn_continuar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+</ScrollView>

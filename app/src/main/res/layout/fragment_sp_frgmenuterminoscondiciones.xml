@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--    Creado por Yaranga Avila Marlon - Universidad Continental - 2022-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout6"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:clickable="true"
+    android:padding="@dimen/activity_margin"
+    android:background="@color/white"
+    tools:context=".tendero.Inicio_sesion.ui.Soporte.sp_frgMenuterminoscondiciones">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_so_04_terminos_condiciones"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:drawableLeft="@drawable/sp_iconterminos2"
+            android:drawablePadding="10dp"
+            android:text="@string/menu_soporte_terminos_condiciones_terminos"
+            android:layout_marginBottom="16dp"
+            style="@style/Outlined_buttonXL_green"/>
+
+        <Button
+            android:id="@+id/btn_so_04_politica_privacidad"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:drawableLeft="@drawable/sp_iconpoliticas"
+            android:text="@string/menu_soporte_terminos_condiciones_politicas"
+            android:layout_marginBottom="16dp"
+            style="@style/Outlined_buttonXL_green"/>
+
+        <Button
+            android:id="@+id/btn_so_04_produc_prohibidos"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:drawableLeft="@drawable/sp_iconproductosnopermitidos"
+            android:text="@string/menu_soporte_terminos_condiciones_lista_negra"
+            android:layout_marginBottom="16dp"
+            style="@style/Outlined_buttonXL_green"/>
+    </LinearLayout>
+
+
+</LinearLayout>

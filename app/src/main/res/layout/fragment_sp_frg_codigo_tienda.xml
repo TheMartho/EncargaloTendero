@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Creado por Briceño Malpartida Douglas Igancio - Universidad Continental - 2022-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:clickable="true"
+    android:background="@color/white"
+    tools:context=".tendero.Inicio_sesion.ui.Soporte.sp_frgCodigoTienda" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Còdigo de tienda"
+                android:gravity="center"
+                android:textSize="16dp"
+                android:layout_margin="10dp"
+                />
+
+<!--            <TextView-->
+<!--                android:id="@+id/txt_Codigotienda2"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:ems="10"-->
+<!--                android:inputType="textPersonName"-->
+<!--                android:text="Name"-->
+<!--                android:layout_margin="20dp"-->
+<!--                android:padding="15dp"-->
+<!--                android:textSize="20dp"-->
+<!--                android:textStyle="bold"-->
+<!--                android:gravity="center"-->
+<!--                android:background="@drawable/dialog_details_background"-->
+<!--                style="@style/input"/>-->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txt_Codigotienda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:padding="15dp"
+                android:text="Name"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:inputType="textPersonName"
+                style="@style/input"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btn_compartircodtendero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Compartir"
+                style="@style/Contained_button_green"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

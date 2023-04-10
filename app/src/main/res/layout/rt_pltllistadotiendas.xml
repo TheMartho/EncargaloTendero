@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
+    android:background="@color/white"
+    android:focusable="true"
+    android:clickable="true">
+
+    <FrameLayout
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="25dp">
+
+        <RadioButton
+            android:id="@+id/rt_ptrbtntiendas"
+            android:layoutDirection="rtl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/outline_black"
+            android:drawableEnd="@drawable/icono_perfil"
+            android:padding="15dp"/>
+
+        <TextView
+            android:id="@+id/rt_pttxtnombretienda"
+            android:layout_marginTop="21dp"
+            android:layout_marginStart="45dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blackPrimary"/>
+    </FrameLayout>
+
+</LinearLayout>

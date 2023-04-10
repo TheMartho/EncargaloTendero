@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/activity_margin"
+    android:paddingBottom="@dimen/activity_margin"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    android:background="@color/white"
+    android:focusable="true"
+    android:clickable="true"
+    android:gravity="center_horizontal"
+    tools:context=".tendero.Inicio_sesion.ui.Mi_tienda.mit_frgmenutienda">
+
+    <Button
+        android:id="@+id/mit_mtbtnproveedor"
+        android:text="@string/mit_varstrmenutienda1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:drawableLeft="@drawable/mit_iconproveedor"
+        style="@style/Outlined_buttonXL_green"/>
+
+    <Button
+        android:id="@+id/mit_mtbtningresostock"
+        android:text="@string/mit_varstrmenutienda2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:drawableLeft="@drawable/mit_iconingresostock"
+        style="@style/Outlined_buttonXL_green"/>
+
+    <Button
+        android:id="@+id/mit_mtbtneditardatos"
+        android:text="@string/mit_varstrmenutienda3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:drawableLeft="@drawable/mit_iconeditar"
+        style="@style/Outlined_buttonXL_green"/>
+
+    <Button
+        android:id="@+id/mit_mtbtncambiartienda"
+        android:text="@string/mit_varstrmenutienda4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:drawableLeft="@drawable/mit_iconcambiartienda"
+        style="@style/Outlined_buttonXL_green"/>
+
+    <Button
+        android:id="@+id/mit_mtbtnagregartienda"
+        android:text="@string/mit_varstrmenutienda5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:drawableLeft="@drawable/mit_iconagregar"
+        style="@style/Outlined_buttonXL_blue"/>
+
+</LinearLayout>
