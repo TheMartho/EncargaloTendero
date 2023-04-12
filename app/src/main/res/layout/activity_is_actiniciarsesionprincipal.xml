@@ -62,7 +62,14 @@
             android:drawableLeft="@drawable/is_icongoogle"
             android:drawablePadding="10dp"/>
 
-
+<Button
+    android:layout_width="@dimen/btn_type01_width"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:text="¿Aun no tienes cuenta? :c"
+    android:id="@+id/btn_crear_cuenta"
+    android:drawablePadding="10dp"
+    ></Button>
 
     </LinearLayout>
 </ScrollView>

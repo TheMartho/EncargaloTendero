@@ -75,6 +75,7 @@ public class activity_is_actiniciarsesionprincipal extends AppCompatActivity {
     RequestQueue request;
     Button btniniciarfb;
     Button btniniciargmail;
+    Button btncrearcuenta;
     GoogleSignInClient mGoogleSignInClient;
     int RC_SIGN_IN = 9001;
     ProgressDialog mProgressDialog;
@@ -151,6 +152,15 @@ public class activity_is_actiniciarsesionprincipal extends AppCompatActivity {
                         Toast.makeText(activity_is_actiniciarsesionprincipal.this,"Error, su cuenta es de gmail", Toast.LENGTH_SHORT).show();
                     }
                 });
+            }
+        });
+        btncrearcuenta=(Button)findViewById(R.id.btn_crear_cuenta);
+        btncrearcuenta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Redireccionar a activity_is_actcrearcuenta.xml
+                Intent intent = new Intent(view.getContext(), activity_is_actcrearunacuenta.class);
+                startActivity(intent);
             }
         });
 

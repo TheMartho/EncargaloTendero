@@ -10,7 +10,10 @@ import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
 import android.os.Bundle;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -59,6 +62,8 @@ public class activity_is_actcrearunacuenta extends AppCompatActivity {
     Button btncrearcuenta;
     EditText is_latitud, is_longitud;
     EditText is_edtnombre, is_edtapellido, is_edtcorreo, is_numero_celular, is_documentopersona;
+    EditText passwordEditText;
+    EditText repeatPasswordEditText;
     ImageView img_user;
     ProgressDialog progreso;
     RequestQueue request;
@@ -70,14 +75,14 @@ public class activity_is_actcrearunacuenta extends AppCompatActivity {
     double latitud, longitud;
     CheckBox is_cucchkbcheckterminos;
     String rolusuario;
+    Button showPasswordButton;
+    Button showPasswordButton2;
 
 
     private final static int REQUEST_CODE = 100;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_is_actcrearunacuenta);
         btncrearcuenta = findViewById(R.id.is_cucbtnRegistrarse);
@@ -87,47 +92,62 @@ public class activity_is_actcrearunacuenta extends AppCompatActivity {
         is_edtapellido = findViewById(R.id.is_cucedtapellido);
         is_edtcorreo = findViewById(R.id.is_cucedtcorreo);
         is_numero_celular = findViewById(R.id.is_cucedtnumtelefono);
-        is_documentopersona = findViewById(R.id.is_cucedtdocumentoidentidad);
-        is_sptipopersona = findViewById(R.id.is_sptipopersona);
+      /*  is_documentopersona = findViewById(R.id.is_cucedtdocumentoidentidad);
+        is_sptipopersona = findViewById(R.id.is_cucspntipopersona);
+        img_user = findViewById(R.id.is_cucimg_user);*/
         is_spcodigodelpais = findViewById(R.id.is_cuccodpais);
-        img_user = findViewById(R.id.is_cucimg_user);
         is_cucbtnterminosycondiciones = findViewById(R.id.is_cucbtnterminosycondiciones);
         is_cucchkbcheckterminos = findViewById(R.id.is_cucchkbcheckterminos);
+        passwordEditText= findViewById(R.id.passwordEditText);
+        repeatPasswordEditText=findViewById(R.id.repeatPasswordEditText);
 
 
 
-        Intent intent = getIntent();
-        this.email = intent.getStringExtra("usuCorreo");
-        this.nombre = intent.getStringExtra("name");
-        this.profile = intent.getStringExtra("profile");
-        // this.profile = intent.getStringExtra("profile");
-        this.rolusuario = intent.getStringExtra("1");
 
-        Glide.with(this).
-                load(profile).
-                into(img_user);
-
-
-        String string = nombre;
-        String[] parts = string.split(" ", 2);
-        String nomb = parts[0];
-        String ape = parts[1];
-
-        is_edtnombre.setText("" + nomb);
-        is_edtapellido.setText("" + ape);
-        is_edtcorreo.setText("" + email);
 
 
         btncrearcuenta = findViewById(R.id.is_cucbtnRegistrarse);
         request = Volley.newRequestQueue(this);
-        String[] Persona = {"Persona natural", "Persona jurídica"};
-        is_sptipopersona = findViewById(R.id.is_cucspntipopersona);
-        ArrayAdapter<String> personaadapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, Persona);
-        is_sptipopersona.setAdapter(personaadapter);
+       // String[] Persona = {"Persona natural", "Persona jurídica"};
+       // is_sptipopersona = findViewById(R.id.is_cucspntipopersona);
+        //ArrayAdapter<String> personaadapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, Persona);
+        //is_sptipopersona.setAdapter(personaadapter);
         String[] CodigoPais = {"+52", "+51", "+54", "+1"};
         is_spcodigodelpais = findViewById(R.id.is_cuccodpais);
         ArrayAdapter<String> codigoadapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, CodigoPais);
         is_spcodigodelpais.setAdapter(codigoadapter);
+
+
+        showPasswordButton = findViewById(R.id.showPasswordButton);
+        showPasswordButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (passwordEditText.getTransformationMethod() == PasswordTransformationMethod.getInstance()) {
+                    // Mostrar contraseña en texto plano
+                    passwordEditText.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                    showPasswordButton.setText("Ocultar contraseña");
+                } else {
+                    // Ocultar contraseña
+                    passwordEditText.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                    showPasswordButton.setText("Mostrar contraseña");
+                }
+            }
+        });
+        showPasswordButton2 = findViewById(R.id.showPasswordButton2);
+        showPasswordButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (repeatPasswordEditText.getTransformationMethod() == PasswordTransformationMethod.getInstance()) {
+                    // Mostrar contraseña en texto plano
+                    repeatPasswordEditText.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                    showPasswordButton2.setText("Ocultar contraseña");
+                } else {
+                    // Ocultar contraseña
+                    repeatPasswordEditText.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                    showPasswordButton2.setText("Mostrar contraseña");
+                }
+            }
+        });
 
 
         is_cucbtnterminosycondiciones.setOnClickListener(new View.OnClickListener() {
@@ -157,6 +177,20 @@ public class activity_is_actcrearunacuenta extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+
+                String password = passwordEditText.getText().toString().trim();
+                String repeatPassword = repeatPasswordEditText.getText().toString().trim();
+
+                if (password.isEmpty() || repeatPassword.isEmpty()) {
+                    Toast.makeText(getApplicationContext(), "Por favor, complete todos los campos", Toast.LENGTH_SHORT).show();
+                } else if (password.length() < 6) {
+                    Toast.makeText(getApplicationContext(), "La contraseña debe tener al menos 6 caracteres", Toast.LENGTH_SHORT).show();
+                } else if (!password.equals(repeatPassword)) {
+                    Toast.makeText(getApplicationContext(), "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show();
+                } else {
+                    Intent intent = new Intent(view.getContext(), activity_is_actverificacioncodigo.class);
+                    startActivity(intent);
+                }
 
                 String url = Util.RUTA + "c_consultar_existencia_persona_inicio_sesion.php?sp_idDocumentoPersona=" + is_documentopersona.getText().toString();
                 url = url.replace(" ", "%20");
@@ -228,7 +262,7 @@ public class activity_is_actcrearunacuenta extends AppCompatActivity {
                 ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
                 bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
                 byte[] byteArray = byteArrayOutputStream.toByteArray();
-                String fotoEnBase64 = android.util.Base64.encodeToString(byteArray, android.util.Base64.DEFAULT);
+               String fotoEnBase64 = android.util.Base64.encodeToString(byteArray, android.util.Base64.DEFAULT);
 
                 Map<String, String> parametros = new HashMap<String, String>();
                 parametros.put("sp_usuCorreo", is_edtcorreo.getText().toString());

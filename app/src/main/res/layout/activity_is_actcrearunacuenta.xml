@@ -21,12 +21,10 @@
         >
 
 
-        <ImageView
-            android:id="@+id/is_cucimg_user"
-            android:layout_width="100dp"
-            android:layout_height="100dp">
-
-        </ImageView>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:text="Crear cuenta"></TextView>
 
         <TextView
             android:layout_width="match_parent"
@@ -86,12 +84,9 @@
             android:layout_width="290dp"
             android:layout_height="40dp"
             android:gravity="center"
-            android:textAllCaps="false"
             android:background="@color/grey"
-            android:focusable="false"
-            android:inputType="none"
-            android:textIsSelectable="false"/>
-
+            android:inputType="none" />
+<!--
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -133,11 +128,11 @@
             android:inputType="number"
             android:maxLength="8"
             />
-
+-->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Celular"
+            android:text="Movil/Whatsapp"
             android:layout_marginTop="20dp"
             android:textSize="15dp"
             android:textColor="@color/grey_600"
@@ -172,6 +167,72 @@
         </LinearLayout>
 
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Contraseña"
+            android:layout_marginTop="20dp"
+            android:textSize="15dp"
+            android:textColor="@color/grey_600"
+            android:layout_marginLeft="40dp"
+            android:autoSizeMaxTextSize="12dp"
+            />
+
+        <EditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="290dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:background="@color/grey"
+            android:hint="Al menos 6 caracteres"
+            android:inputType="textPassword" />
+        <Button
+            android:id="@+id/showPasswordButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mostrar contraseña" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Repetir Contraseña"
+            android:layout_marginTop="20dp"
+            android:textSize="15dp"
+            android:textColor="@color/grey_600"
+            android:layout_marginLeft="40dp"
+            android:autoSizeMaxTextSize="12dp"
+            />
+
+
+        <EditText
+            android:id="@+id/repeatPasswordEditText"
+            android:layout_width="290dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:hint="Al menos 6 caracteres"
+            android:background="@color/grey"
+            android:inputType="textPassword" />
+        <Button
+            android:id="@+id/showPasswordButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mostrar contraseña" />
+
+
+
+        <Button
+            android:id="@+id/is_cucbtnRegistrarse"
+            android:layout_width="@dimen/btn_type04_width"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/containedbtn_blue"
+            android:text="@string/is_varstrcrearunacuenta7"
+            android:textAllCaps="true"
+            android:textColor="@color/whitePrimary"
+            android:clickable = "false"
+            />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -200,22 +261,6 @@
                 android:textSize="15dp" />
 
         </LinearLayout>
-        //android:background="none"
-
-
-
-        <Button
-            android:id="@+id/is_cucbtnRegistrarse"
-            android:layout_width="@dimen/btn_type04_width"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/containedbtn_blue"
-            android:text="@string/is_varstrcrearunacuenta7"
-            android:textAllCaps="true"
-            android:textColor="@color/whitePrimary"
-            android:clickable = "false"
-            />
-
 
     </LinearLayout>
 
