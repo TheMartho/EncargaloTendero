@@ -16,7 +16,7 @@ public class is_cls_Constants_InicioSesion {
     public static String mobile = "mobile";
     public static String REFER_CODE = "refer_code";
     public static String FRIENDS_CODE = "friends_code";
-    public static String rolusuario = "3";
+    public static String rolusuario = "1";
     public static String idDocumentoPersona = "idDocumentoPersona";
     public static final  String EMAILNOTIFICACIONES = "encargalocdmx@gmail.com";
     public static final String PASSWORD = "qxevlvmowfjbdnfj";

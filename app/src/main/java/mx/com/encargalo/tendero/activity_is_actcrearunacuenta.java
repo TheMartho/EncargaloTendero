@@ -75,6 +75,7 @@ public class activity_is_actcrearunacuenta extends AppCompatActivity {
     double latitud, longitud;
     CheckBox is_cucchkbcheckterminos;
     String rolusuario;
+    String password;
     Button showPasswordButton;
     Button showPasswordButton2;
 
@@ -178,7 +179,7 @@ public class activity_is_actcrearunacuenta extends AppCompatActivity {
             public void onClick(View view) {
 
 
-                String password = passwordEditText.getText().toString().trim();
+                password = passwordEditText.getText().toString().trim();
                 String repeatPassword = repeatPasswordEditText.getText().toString().trim();
 
                 if (password.isEmpty() || repeatPassword.isEmpty()) {
@@ -234,8 +235,8 @@ public class activity_is_actcrearunacuenta extends AppCompatActivity {
 
 
     private void ejecutarServicio(String URL) {
-        int i = is_sptipopersona.getSelectedItemPosition() + 1;
-        String po = String.valueOf(i);
+       /* int i = is_sptipopersona.getSelectedItemPosition() + 1;
+        String po = String.valueOf(i);*/
 
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
@@ -245,6 +246,7 @@ public class activity_is_actcrearunacuenta extends AppCompatActivity {
                 Intent intent = new Intent(activity_is_actcrearunacuenta.this, activity_is_actverificacioncodigo.class);
                 intent.putExtra("usuCorreo", is_edtcorreo.getText().toString());
                 intent.putExtra("idRolUsuario", rolusuario);
+                intent.putExtra("usuPassword", password);
                 startActivity(intent);
 
             }
@@ -267,9 +269,8 @@ public class activity_is_actcrearunacuenta extends AppCompatActivity {
                 Map<String, String> parametros = new HashMap<String, String>();
                 parametros.put("sp_usuCorreo", is_edtcorreo.getText().toString());
                 parametros.put("sp_usuImagen", profile);
-                // parametros.put("sp_usuImagen", fotoEnBase64);
-                parametros.put("sp_idRolUsuario", "1" +
-                        "");//-------------------------------------DE TENDERO(1) A REPARTIDOR(2)
+                parametros.put("sp_usuImagen", fotoEnBase64);
+                parametros.put("sp_idRolUsuario", "1" + "");//-TENDERO(1)-REPARTIDOR(2)-CLIENTE(3)
                 parametros.put("sp_idDocumentoPersona", is_documentopersona.getText().toString());
                 parametros.put("sp_perNombres", is_edtnombre.getText().toString());
                 parametros.put("sp_perApellidos", is_edtapellido.getText().toString());

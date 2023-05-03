@@ -1,8 +1,11 @@
 package mx.com.encargalo.tendero.Inicio_sesion;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -16,10 +19,12 @@ import androidx.appcompat.widget.Toolbar;
 
 import mx.com.encargalo.R;
 import mx.com.encargalo.tendero.Util.Util;
+import mx.com.encargalo.tendero.activity_is_actcrearunacuenta;
 
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
+
+
 
         //TEMPORAL
 //        SharedPreferences sharedPreferences =
@@ -46,12 +53,13 @@ public class MainActivity extends AppCompatActivity {
                 R.id.nav_mi_publicidad,
                 R.id.nav_mi_aprendizaje,
                 R.id.nav_soporte)
-                .setDrawerLayout(drawer)
+                .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
-
+        View hView = navigationView.getHeaderView(0);
+        ImageView imageView = (ImageView) hView.findViewById(R.id.imageView);
 
 
 
@@ -59,6 +67,16 @@ public class MainActivity extends AppCompatActivity {
 //        SharedPreferences.Editor editocred=creduser.edit();
 //        editocred.putString("CredId","73769972");
 //        editocred.commit();
+
+
+
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), activity_is_actcrearunacuenta.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -73,5 +91,7 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
+
     }
+
 }
