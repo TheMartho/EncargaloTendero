@@ -38,6 +38,9 @@
         <action
             android:id="@+id/action_nav_menutienda_to_nav_ingreso_stock"
             app:destination="@id/nav_ingreso_stock" />
+        <action
+            android:id="@+id/action_nav_menutienda_to_nav_mis_productos"
+            app:destination="@id/nav_mis_productos" />
     </fragment>
 
     <fragment

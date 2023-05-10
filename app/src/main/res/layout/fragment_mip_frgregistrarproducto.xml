@@ -68,6 +68,21 @@
             style="@style/Subtitle_2"
             />
 
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Codigo o SKU"
+            style="@style/textinput"
+            />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/mip_rpedtCodigo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            style="@style/input">
+        </com.google.android.material.textfield.TextInputEditText>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

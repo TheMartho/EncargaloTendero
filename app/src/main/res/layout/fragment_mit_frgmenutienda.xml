@@ -24,6 +24,15 @@
         style="@style/Outlined_buttonXL_green"/>
 
     <Button
+        android:id="@+id/mit_mtbtnproductos"
+        android:text="@string/productos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:drawableLeft="@drawable/qr_3x1"
+        style="@style/Outlined_buttonXL_green"/>
+
+    <Button
         android:id="@+id/mit_mtbtningresostock"
         android:text="@string/mit_varstrmenutienda2"
         android:layout_width="match_parent"

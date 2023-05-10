@@ -41,7 +41,7 @@ import mx.com.encargalo.tendero.Util.Util;
 
 public class mip_frgregistrarproducto extends Fragment {
 
-    TextInputEditText mip_rpedtbusquedanombre, mip_rpedtdescpricion, mip_rpedtstock, mip_rpedtstockminimo, mip_rpedtcategoria, mip_rpedtcostoproducto, mip_rpedtprecioventa;
+    TextInputEditText mip_rpedtCodigo,mip_rpedtbusquedanombre, mip_rpedtdescpricion, mip_rpedtstock, mip_rpedtstockminimo, mip_rpedtcategoria, mip_rpedtcostoproducto, mip_rpedtprecioventa;
     Button mit_rpbtnagregarproducto, mit_rpbtnproductopropio;
     Spinner mip_rpspnunidaddemedida;
     ImageButton mip_rpbtnbuscarproducto;
@@ -70,6 +70,7 @@ public class mip_frgregistrarproducto extends Fragment {
         mip_rpedtstock = view.findViewById(R.id.mip_rpedtstock);
         mip_rpedtstockminimo = view.findViewById(R.id.mip_rpedtstockminimo);
         mip_rpedtcategoria = view.findViewById(R.id.mip_rpedtcategoria);
+        mip_rpedtCodigo= view.findViewById(R.id.mip_rpedtCodigo);
 
         mip_rpspnunidaddemedida = view.findViewById(R.id.mip_rpspnunidaddemedida);
 
@@ -79,6 +80,7 @@ public class mip_frgregistrarproducto extends Fragment {
         mit_arlregistrarproducto = new ArrayList<>(); //+@OHC20.11.2022
         mit_arlregistrarproducto.clear();
 
+        mip_rpedtCodigo.setEnabled(false);
         mip_rpedtdescpricion.setEnabled(false);
         mip_rpedtstock.setEnabled(false);
         mip_rpedtstockminimo.setEnabled(false);
@@ -102,7 +104,7 @@ public class mip_frgregistrarproducto extends Fragment {
 
             mip_rpedtstock.setText("0.0");
             mip_rpedtstockminimo.setText("0.0");
-
+            mip_rpedtCodigo.setEnabled(true);
             mip_rpedtdescpricion.setEnabled(true);
             mip_rpedtstock.setEnabled(true);
             mip_rpedtstockminimo.setEnabled(true);

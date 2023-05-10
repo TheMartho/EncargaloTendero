@@ -1,6 +1,7 @@
 package mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_tienda;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,11 +14,13 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
 import mx.com.encargalo.R;
+import mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Perfil.Perfil;
+import mx.com.encargalo.tendero.Inicio_sesion.ui.Mis_productos.mip_frgmenuproductos;
 import mx.com.encargalo.tendero.Util.Util;
 
 public class mit_frgmenutienda extends Fragment {
 
-    Button mit_mtbtneditardatos, mit_mtbtncambiartienda, mit_mtbtnagregartienda,mit_mtbtnproveedor,mit_mtbtningresostock;
+    Button mit_mtbtneditardatos, mit_mtbtncambiartienda, mit_mtbtnagregartienda,mit_mtbtnproveedor,mit_mtbtningresostock, mit_mtbtnproductos;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -33,6 +36,7 @@ public class mit_frgmenutienda extends Fragment {
         mit_mtbtnagregartienda = view.findViewById(R.id.mit_mtbtnagregartienda);
         mit_mtbtnproveedor = view.findViewById(R.id.mit_mtbtnproveedor);
         mit_mtbtningresostock = view.findViewById(R.id.mit_mtbtningresostock);
+        mit_mtbtnproductos = view.findViewById(R.id.mit_mtbtnproductos);
         int idspn = rt_fctautocompletado.IdSpinner(preferencias.getString("tieCiudadNom",""));
         editor.putInt("tieCiudad", idspn);
         editor.remove("Direccion");
@@ -90,6 +94,15 @@ public class mit_frgmenutienda extends Fragment {
             public void onClick(View view) {
                 if (preferencias.getString("tieNombre", "").equals("")) Toast.makeText(getActivity(), "Elija una Tienda!!", Toast.LENGTH_SHORT).show();
                 else Navigation.findNavController(view).navigate(R.id.action_nav_menutienda_to_nav_ingreso_stock);
+            }
+        });
+
+        mit_mtbtnproductos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (preferencias.getString("tieNombre", "").equals("")) Toast.makeText(getActivity(), "Elija una Tienda!!", Toast.LENGTH_SHORT).show();
+                else Navigation.findNavController(view).navigate(R.id.action_nav_menutienda_to_nav_mis_productos);
+
             }
         });
 

@@ -36,7 +36,7 @@
     <string name="loading">Loading</string>
     <string name="account_deactivate">Your Account is deactivate by admin</string>
     <string name="completed_register">we\'re almost done, we just need you to upload your profile picture</string>
-<!--    <string name="default_web_client_id" translatable="false">869132616981-v7gms838fme64hfud43s6sconqee4t8m.apps.googleusercontent.com</string>
+    <!--    <string name="default_web_client_id" translatable="false">869132616981-v7gms838fme64hfud43s6sconqee4t8m.apps.googleusercontent.com</string>
     <string name="gcm_defaultSenderId" translatable="false">869132616981</string>
     <string name="google_api_key" translatable="false">AIzaSyBgTB4wH2vYgkQnA4ob8DQqIs54_DQStss</string>
     <string name="google_app_id" translatable="false">1:869132616981:android:dff11b6c8d905c5b74551c</string>
@@ -556,6 +556,7 @@
     <!-- GA_home_02 -->
     <string name="ga_varstrproveedorregistrado0">El proveedor se registró correctamente</string>
     <string name="dialog_producto">SELECCIONE UN PRODUCTO</string>
+    <string name="productos">Productos</string>
     <!--Ciudad Distrito proveedor-->
     <string-array name="ga_varstrregistrarproveedor10">
         <item> Seleccione </item>

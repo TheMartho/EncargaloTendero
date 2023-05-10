@@ -18,6 +18,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import mx.com.encargalo.R;
+import mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Perfil.Perfil;
+
 import mx.com.encargalo.tendero.Util.Util;
 import mx.com.encargalo.tendero.activity_is_actcrearunacuenta;
 
@@ -73,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), activity_is_actcrearunacuenta.class);
+                Intent intent = new Intent(view.getContext(), Perfil.class);
                 startActivity(intent);
             }
         });

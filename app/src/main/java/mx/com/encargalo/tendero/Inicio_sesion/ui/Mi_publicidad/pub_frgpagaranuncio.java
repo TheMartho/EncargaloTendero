@@ -1,11 +1,13 @@
 //Creado por Morales Fabian Renzo Gabriel - Universidad Continental - 2022
 package mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_publicidad;
 
+import android.app.Application;
 import android.app.Dialog;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import androidx.annotation.RequiresApi;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
@@ -22,6 +24,9 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.android.material.snackbar.BaseTransientBottomBar;
+import com.google.android.material.snackbar.Snackbar;
+
 import java.util.Date;
 import java.util.Hashtable;
 import java.util.Map;
@@ -29,8 +34,18 @@ import mx.com.encargalo.R;
 import mx.com.encargalo.tendero.Util.Util;
 import static android.content.Context.MODE_PRIVATE;
 
+
 public class pub_frgpagaranuncio extends Fragment {
 
+        private static pub_frgpagaranuncio instance;
+
+        public void onCreate() {
+            instance = this;
+        }
+
+    public void toast() {
+        Toast.makeText(getContext(), "Cancelar", Toast.LENGTH_SHORT).show();
+    }
     Button pub_pabtnpagoefectivo;
     Button pub_pabtncancelarpago;
     Button pub_pabtnpagaranuncio;
@@ -39,6 +54,8 @@ public class pub_frgpagaranuncio extends Fragment {
     float preciot = 0;
     RequestQueue request;
     JsonObjectRequest jsonObjectRequest;
+
+
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -90,9 +107,10 @@ public class pub_frgpagaranuncio extends Fragment {
         pub_pabtncancelarpago.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //auxview = view;
+                auxview = view;
                 //showDialogoCancelar();
                 Navigation.findNavController(view).navigate(R.id.nav_crearanuncio);
+
             }
         });
         return vista;
