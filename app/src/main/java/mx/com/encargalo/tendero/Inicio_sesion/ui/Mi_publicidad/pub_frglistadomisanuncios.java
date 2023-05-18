@@ -76,6 +76,7 @@ public class pub_frglistadomisanuncios extends Fragment {
                                 publicidad.setPub_strvistas(jsonObject.optString("pubCantVistas"));
                                 publicidad.setPub_strimagenurl(jsonObject.optString("pubImagen"));
                                 publicidad.setPub_strconversion(jsonObject.optString("tasa"));
+
                                 publicidad.setPub_strdescripcion(jsonObject.optString("pubDescripcion"));
                                 publicidad.setPub_strmonto(jsonObject.optString("factpubMontoTotal"));
                                 pub_listapublicidad.add(publicidad);

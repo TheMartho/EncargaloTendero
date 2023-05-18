@@ -264,7 +264,7 @@
     <string name="pub_varstrmodalpagaranuncio2">Aceptar</string>
     <string name="pub_varstrmodalpagaranuncio3">Cancelar</string>
     <!-- pub_modalcancelaranuncio -->
-    <string name="pub_varstrmodalcancelaranuncio1">¿Seguro que desea cancelar anuncio?</string>
+    <string name="pub_varstrmodalcancelaranuncio1">Se Cancelo el Anuncio</string>
     <string name="pub_varstrmodalcancelaranuncio2">Aceptar</string>
     <string name="pub_varstrmodalcancelaranuncio3">Cancelar</string>
 

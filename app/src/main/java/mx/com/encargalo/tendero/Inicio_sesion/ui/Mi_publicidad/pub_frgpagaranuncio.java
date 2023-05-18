@@ -10,6 +10,8 @@ import androidx.annotation.RequiresApi;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
+
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,15 +39,7 @@ import static android.content.Context.MODE_PRIVATE;
 
 public class pub_frgpagaranuncio extends Fragment {
 
-        private static pub_frgpagaranuncio instance;
 
-        public void onCreate() {
-            instance = this;
-        }
-
-    public void toast() {
-        Toast.makeText(getContext(), "Cancelar", Toast.LENGTH_SHORT).show();
-    }
     Button pub_pabtnpagoefectivo;
     Button pub_pabtncancelarpago;
     Button pub_pabtnpagaranuncio;
@@ -107,13 +101,17 @@ public class pub_frgpagaranuncio extends Fragment {
         pub_pabtncancelarpago.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                auxview = view;
-                //showDialogoCancelar();
+                auxview=view;
+                showDialogoCancelar();
                 Navigation.findNavController(view).navigate(R.id.nav_crearanuncio);
-
             }
         });
         return vista;
+    }
+    private void  showDialogoCancelar() {
+        final Dialog dialog = new Dialog(getContext());
+        dialog.setContentView(R.layout.pub_lytmodelcancelaranuncio);
+        dialog.show();
     }
 
     private void  showDialogoPagar(){

@@ -15,7 +15,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="SE CANCELO EL ANUNCIO"
+            android:text="¿SEGURO QUE DESEA CERRAR LA SESION?"
             style="@style/Subtitle_1"
             android:textAlignment="center"
             android:layout_marginBottom="20dp"/>
@@ -24,14 +24,14 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <Button
-                android:id="@+id/pub_mpabtncancelar"
+                android:id="@+id/sp_mpabtncancelar"
                 android:layout_width="@dimen/btn_type02_width"
                 android:layout_height="wrap_content"
                 android:text="@string/pub_varstrmodalpagaranuncio3"
                 android:layout_marginRight="50dp"
                 style="@style/Text_button_red"/>
             <Button
-                android:id="@+id/pub_mpabtnaceptar"
+                android:id="@+id/sp_mpabtnaceptar"
                 android:layout_width="@dimen/btn_type02_width"
                 android:layout_height="wrap_content"
                 android:text="@string/pub_varstrmodalpagaranuncio2"

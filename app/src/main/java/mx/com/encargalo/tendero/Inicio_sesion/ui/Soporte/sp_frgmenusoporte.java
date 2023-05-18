@@ -1,6 +1,7 @@
 //Creado por Briceño Malpartida Douglas Igancio - Universidad Continental - 2022
 package mx.com.encargalo.tendero.Inicio_sesion.ui.Soporte;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -84,15 +85,38 @@ public class sp_frgmenusoporte extends Fragment {
         btn_cerrar_sesion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //implementacion de cierre de sesion
-                SharedPreferences sharedPreferencesLogin = getActivity().getSharedPreferences("Credencial_Global_usuario", 0);
-                SharedPreferences.Editor editor = sharedPreferencesLogin.edit();
+                final Dialog dialog = new Dialog(getContext());
+                dialog.setContentView(R.layout.sp_litmodelcerrarsesion);
+                dialog.show();
+                Button btnaceptar = dialog.findViewById(R.id.sp_mpabtnaceptar);
+                Button btncancelar = dialog.findViewById(R.id.sp_mpabtncancelar);
 
-                editor.clear();
-                editor.commit();
+                btnaceptar.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        //implementacion de cierre de sesion
+                        //SE CIERRA LA SESION Y ENVIA A LA PANTALLA PRINCIPAL
+                        SharedPreferences sharedPreferencesLogin = getActivity().getSharedPreferences("Credencial_Global_usuario", 0);
+                        SharedPreferences.Editor editor = sharedPreferencesLogin.edit();
 
-                Intent intent = new Intent(getActivity(), activity_is_actiniciarsesionprincipal.class);
-                startActivity(intent);
+                        editor.clear();
+                        editor.commit();
+
+                        Intent intent = new Intent(getActivity(), activity_is_actiniciarsesionprincipal.class);
+                        startActivity(intent);
+                    }
+                });
+
+                btncancelar.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        //SE DESAPARECE EL DIALOGO
+                        dialog.dismiss();
+                    }
+                });
+
+
+
             }
         });
 
