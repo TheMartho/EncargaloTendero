@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".tendero.Inicio_sesion.ui.Mi_Perfil.mip_perfil">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <!-- Nombre de la tienda -->
+    <TextView
+        android:id="@+id/tienda_nombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nombre de la tienda" />
+
+    <!-- Imagen -->
+    <ImageView
+        android:id="@+id/tienda_imagen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/agregar_tienda" />
+
+    <!-- Sitio web -->
+    <TextView
+        android:id="@+id/tienda_sitio_web"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="www.mitienda.com" />
+
+    <!-- Descripción -->
+    <TextView
+        android:id="@+id/tienda_descripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Descripción de la tienda" />
+
+    <!-- Campo contraseña -->
+    <EditText
+        android:id="@+id/tienda_contrasena"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Contraseña"
+        android:inputType="textPassword" />
+
+    <!-- Mensaje de confirmación -->
+    <TextView
+        android:id="@+id/mensaje_confirmacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="¿Estás seguro de cambiar los datos de la tienda?" />
+
+    <!-- Botón de confirmación -->
+    <Button
+        android:id="@+id/boton_confirmar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirmar" />
+
+</LinearLayout>

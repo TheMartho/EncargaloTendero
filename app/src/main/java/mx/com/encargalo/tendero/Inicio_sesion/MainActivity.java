@@ -1,6 +1,8 @@
 package mx.com.encargalo.tendero.Inicio_sesion;
 
 import android.app.ActionBar;
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -8,8 +10,11 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.facebook.login.LoginFragment;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -37,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
+        Activity a = this;
 
 
 
@@ -49,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_inicio,
+                R.id.nav_mi_perfil,
                 R.id.rt_frgtiendaelegida,
                 R.id.nav_mi_tienda,
                 R.id.nav_mis_productos,
@@ -76,8 +83,7 @@ public class MainActivity extends AppCompatActivity {
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), Perfil.class);
-                startActivity(intent);
+                Navigation.findNavController(a, R.id.nav_host_fragment).navigate(R.id.nav_mi_perfil);
             }
         });
     }

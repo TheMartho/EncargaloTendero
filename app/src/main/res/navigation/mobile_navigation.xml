@@ -401,5 +401,15 @@
         android:label="@string/mit_varstrlistaproductos"
         tools:layout="@layout/fragment_mip_frglistaproductos" />
 
+    <!--Perfil-->
+    <fragment
+        android:id="@+id/nav_mi_perfil"
+        android:name="mx.com.encargalo.tendero.Inicio_sesion.ui.Mi_Perfil.mip_perfil"
+        android:label="Mi Perfil"
+        tools:layout="@layout/fragment_mip_perfil"
+        >
+    </fragment>
+
+
 
 </navigation>
