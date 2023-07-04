@@ -201,10 +201,10 @@ public class activity_is_actcrearunacuenta extends AppCompatActivity {
                         Toast.makeText(activity_is_actcrearunacuenta.this, "Documento ya vinculado a una cuenta existente.", Toast.LENGTH_SHORT).show();
 
 
-                        // Intent intent=new Intent(activity_is_actverificacioncodigo.this,activity_is_actverificacioncodigo.class);
-                        //intent.putExtra("UsuCorreo", is_edtcorreo.getText().toString());
-                        //startActivity(intent);
-                        //progreso.hide();
+                        Intent intent=new Intent(activity_is_actcrearunacuenta.this,activity_is_actverificacioncodigo.class);
+                        intent.putExtra("UsuCorreo", is_edtcorreo.getText().toString());
+                        startActivity(intent);
+                        progreso.hide();
 
                     }
 
@@ -503,6 +503,7 @@ public class activity_is_actcrearunacuenta extends AppCompatActivity {
     public void onBackPressed() {
 
     }
+
 }
 
 
